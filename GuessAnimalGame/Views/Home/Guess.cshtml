@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Guess";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+@using (Html.BeginForm("Guess", "Home", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="txt_color ">Please tell us the color of this animal</label>
+                @Html.TextBox("txt_color",null,new { @class="form-control"})
+            </div>
+            <div class="form-group">
+                <label for="txt_sound ">Please tell us the sound of this animal</label>
+                @Html.TextBox("txt_sound", null,new { @class="form-control"})
+            </div>
+            <div class="form-group">
+                <label for="txt_skin">Please tell us the skin of this animal</label>
+                @Html.TextBox("txt_skin", null,new { @class="form-control"})
+            </div>
+            <button type="submit" class="btn btn-default">Guess</button>
+        </div>
+    </div>
+}

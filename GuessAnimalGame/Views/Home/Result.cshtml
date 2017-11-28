@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Result";
+}
+<h2>@ViewBag.Title.</h2>
+
+
+@if (@ViewBag.result != "fail")
+{
+<h3>Is @ViewBag.result the one you selected?</h3>
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <a class="btn btn-default" href="@Url.Action("Index", "Home")">Bingo! Click me and play Again</a>
+            <a class="btn btn-default" href="@Url.Action("Guess", "Home")">Bang! Shall I guess again?</a>
+        </div>
+    </div>
+}
+else
+{
+    <h3>Sorry can we play it again?</h3>
+    <div class="row">
+        <a class="btn btn-default" href="@Url.Action("index", "Home")">Play Again</a>
+    </div>
+}

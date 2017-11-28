@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Add new animal";
+}
+<h2>@ViewBag.Title.</h2>
+
+<div class="alert-warning">
+    <h3>@ViewBag.Message</h3>
+</div>
+@using (Html.BeginForm("Add", "Home", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="txt_name ">Name</label>
+                @Html.TextBox("txt_name", null, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="txt_color ">Color</label>
+                @Html.TextBox("txt_color", null, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="txt_sound ">Please tell us the sound of this animal</label>
+                @Html.TextBox("txt_sound", null, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label for="txt_skin">Please tell us the skin of this animal</label>
+                @Html.TextBox("txt_skin", null, new { @class = "form-control" })
+            </div>
+            <button type="submit" class="btn btn-default">Add</button>
+        </div>
+    </div>
+}
